@@ -7,21 +7,18 @@
 //
 
 import Foundation
-import Argo
-import Curry
-import Runes
+import Mapper
 
-struct UserModel {
+struct User: Mappable {
     let id: Int
-    let name: String
+    let name: String?
     let email: String?
-}
-
-extension UserModel: Argo.Decodable {
-    static func decode(_ json: JSON) -> Decoded<UserModel> {
-        return curry(UserModel.init)
-            <^> json <| "id"
-            <*> json <| "name"
-            <*> json <|? "email" // Use ? for parsing optional values
+    let title: String?
+    
+    init(map: Mapper) throws {
+        try id = map.from("id")
+        name = map.optionalFrom("name")
+        email = map.optionalFrom("email")
+        title = map.optionalFrom("title")
     }
 }

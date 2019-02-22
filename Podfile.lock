@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (4.8.1)
+  - ModelMapper (9.0.1):
+    - ModelMapper/Core (= 9.0.1)
+  - ModelMapper/Core (9.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - ModelMapper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ModelMapper
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  ModelMapper: 89a61430a75e6265040dc9555ab1feddeb25b986
+
+PODFILE CHECKSUM: 0924eabefa4ad51974c7bd3f0a310c574d962c8b
+
+COCOAPODS: 1.6.0
